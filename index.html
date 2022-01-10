@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player Website With Vanilla JavaScript</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/main.min.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <p id="logo"><i class="fa fa-music" aria-hidden="true"></i></p>
+
+        <!-- Left column -->
+        <div class="left">
+            <!-- Song image goes here -->
+            <img id="track_image">
+            <div class="volume">
+                <p id="volume_show">90</p>
+
+                <i id="volume_icon" class="fa fa-volume-up" aria-hidden="true" onclick="muteSound()"></i>
+                <input id="volume" type="range" min="0" max="100" value="90" onchange="volumeChange()">
+            </div>
+        </div>
+        <!-- /Left column -->
+
+        <!-- Right Column -->
+        <div class="right">
+            <div class="show_song-number">
+                <p id="current">1</p>
+                <p>/</p>
+                <!-- <span>/</span> -->
+                <p id="total">5</p>
+            </div>
+
+            <!-- Song Title and Artist Name -->
+            <p id="title">title.mp3</p>
+            <p id="artist">Artist name</p>
+
+            <!-- Constorls -->
+            <div class="controls">
+                <button id="prev" onclick="previousSong()"><i class="fa fa-step-backward"
+                        aria-hidden="true"></i></button>
+                <button id="play" onclick="listen()"><i class="fa fa-play" aria-hidden="true"></i></button>
+                <button id="next" onclick="nextSong()"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+            </div>
+
+            <!-- Song Duration -->
+            <div class="duration">
+                <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="changeDuration()">
+            </div>
+            <button id="auto" onclick="autoSwitch()">Auto Play <i class="fas fa-circle-notch"
+                    aria-hidden="true"></i></button>
+        </div>
+        <!-- /Right Column -->
+    </div>
+
+    <script src="./js/tutorial.js"></script>
+</body>
+
+</html>
