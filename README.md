@@ -10,4 +10,6 @@
 
 
 
-Start Again at Right 13:35
+# Assign
+ - How to repeat song
+ - How to reset the track when the track end during autoplay.
